@@ -7,7 +7,7 @@ from speechbrain.dataio.dataio import read_audio
 
 logger = logging.getLogger(__name__)
 
-SAMPLERATE = 56000
+SAMPLERATE = 48000
 
 
 def data_prepare(data_folder, save_json_train, save_json_valid, save_json_test):
@@ -17,9 +17,9 @@ def data_prepare(data_folder, save_json_train, save_json_valid, save_json_test):
         return
 
     # If the dataset doesn't exist yet, download it
-    train_folder = os.path.join(data_folder, "train", "clean")
-    valid_folder = os.path.join(data_folder, "valid", "clean")
-    test_folder = os.path.join(data_folder, "test", "clean")
+    train_folder = os.path.join(data_folder, "train")
+    valid_folder = os.path.join(data_folder, "valid")
+    test_folder = os.path.join(data_folder, "test")
 
     # List files and create manifest from list
     logger.info(
@@ -55,7 +55,7 @@ def create_json(wav_list, json_file):
         # Manipulate path to get relative path and uttid
         path_parts = wav_file.split(os.path.sep)
         uttid, _ = os.path.splitext(path_parts[-1])
-        relative_path = os.path.join("{data_root}", *path_parts[-5:])
+        relative_path = os.path.join("{data_root}", *path_parts[-2:])
 
         # Create entry for this utterance
         json_dict[uttid] = {"wav": relative_path, "length": duration}

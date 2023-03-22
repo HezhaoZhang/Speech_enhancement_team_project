@@ -1,0 +1,580 @@
+2023-03-22 17:30:51,500 - speechbrain.core - INFO - Beginning experiment!
+2023-03-22 17:30:51,500 - speechbrain.core - INFO - Experiment folder: .\results\4234-1
+2023-03-22 17:30:53,243 - speechbrain.utils.superpowers - DEBUG - aiodns==3.0.0
+aiohttp==3.7.0
+aiohttp-socks==0.4.1
+aiosignal==1.3.1
+anyio @ file:///C:/ci/anyio_1644481856696/work/dist
+appdirs==1.4.4
+argon2-cffi @ file:///opt/conda/conda-bld/argon2-cffi_1645000214183/work
+argon2-cffi-bindings @ file:///C:/ci/argon2-cffi-bindings_1644569876605/work
+asttokens @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
+async-timeout==3.0.1
+atomicwrites==1.4.1
+attrs==22.2.0
+Automat==22.10.0
+Babel @ file:///C:/b/abs_a2shv_3tqi/croot/babel_1671782804377/work
+backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+beautifulsoup4==4.11.2
+black==19.10b0
+bleach @ file:///opt/conda/conda-bld/bleach_1641577558959/work
+blis==0.7.9
+brotlipy==0.7.0
+catalogue==2.0.8
+cchardet==2.1.7
+certifi @ file:///C:/b/abs_85o_6fm0se/croot/certifi_1671487778835/work/certifi
+cffi @ file:///C:/b/abs_49n3v2hyhr/croot/cffi_1670423218144/work
+cfgv==3.3.1
+chardet==3.0.4
+charset-normalizer==3.0.1
+click==8.0.4
+colorama @ file:///C:/b/abs_a9ozq0l032/croot/colorama_1672387194846/work
+comm @ file:///C:/b/abs_1419earm7u/croot/comm_1671231131638/work
+confection==0.0.4
+constantly==15.1.0
+contourpy==1.0.7
+cryptography @ file:///C:/b/abs_8ecplyc3n2/croot/cryptography_1677533105000/work
+cssselect==1.2.0
+cycler==0.11.0
+cymem==2.0.7
+Cython==0.29.32
+dataclasses==0.6
+debugpy @ file:///C:/ci_310/debugpy_1642079916595/work
+decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
+defusedxml @ file:///tmp/build/80754af9/defusedxml_1615228127516/work
+distlib==0.3.6
+elastic-transport==8.4.0
+elasticsearch==8.6.2
+elasticsearch-dsl==7.4.1
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl
+entrypoints @ file:///C:/ci/entrypoints_1649926676279/work
+et-xmlfile==1.1.0
+executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
+fake-useragent==1.1.1
+fastjsonschema @ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_ebruxzvd08/croots/recipe/python-fastjsonschema_1661376484940/work
+filelock==3.9.0
+flake8==3.7.9
+flit_core @ file:///opt/conda/conda-bld/flit-core_1644941570762/work/source/flit_core
+fonttools==4.38.0
+frozenlist==1.3.3
+fst-pso==1.8.1
+FuzzyTM==2.0.5
+gensim==4.3.0
+geographiclib==2.0
+geopy==2.3.0
+googletransx==2.4.2
+huggingface-hub==0.13.1
+hyperlink==21.0.0
+HyperPyYAML==1.1.0
+identify==2.5.19
+idna @ file:///C:/b/abs_bdhbebrioa/croot/idna_1666125572046/work
+incremental==22.10.0
+ipykernel @ file:///C:/b/abs_b4f07tbsyd/croot/ipykernel_1672767104060/work
+ipython @ file:///C:/b/abs_d3h279dv3h/croot/ipython_1676582236558/work
+ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
+ipywidgets @ file:///tmp/build/80754af9/ipywidgets_1634143127070/work
+itemadapter==0.7.0
+itemloaders==1.0.6
+jedi @ file:///C:/ci/jedi_1644315428305/work
+Jinja2 @ file:///C:/b/abs_7cdis66kl9/croot/jinja2_1666908141852/work
+jmespath==1.0.1
+joblib==1.2.0
+json5 @ file:///tmp/build/80754af9/json5_1624432770122/work
+jsonschema @ file:///C:/b/abs_6ccs97j_l8/croot/jsonschema_1676558690963/work
+jupyter @ file:///C:/Windows/TEMP/abs_56xfdi__li/croots/recipe/jupyter_1659349053177/work
+jupyter-console @ file:///C:/b/abs_68ttzd5p9c/croot/jupyter_console_1677674667636/work
+jupyter-server @ file:///C:/b/abs_1cfi3__jl8/croot/jupyter_server_1671707636383/work
+jupyter_client @ file:///C:/b/abs_d8fk_kz9zk/croot/jupyter_client_1676330195659/work
+jupyter_core @ file:///C:/b/abs_bd7elvu3w2/croot/jupyter_core_1676538600510/work
+jupyterlab @ file:///C:/b/abs_513jt6yy74/croot/jupyterlab_1675354138043/work
+jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
+jupyterlab-widgets @ file:///tmp/build/80754af9/jupyterlab_widgets_1609884341231/work
+jupyterlab_server @ file:///C:/b/abs_d1z_g1swc8/croot/jupyterlab_server_1677153204814/work
+kiwisolver==1.4.4
+langcodes==3.3.0
+lxml==4.9.2
+MarkupSafe==2.1.2
+matplotlib==3.7.0
+matplotlib-inline @ file:///C:/ci/matplotlib-inline_1661934094726/work
+mccabe==0.6.1
+miniful==0.0.6
+mistune @ file:///C:/ci_310/mistune_1642084168466/work
+mkl-fft==1.3.1
+mkl-random @ file:///C:/ci_310/mkl_random_1643050563308/work
+mkl-service==2.4.0
+more-itertools==9.1.0
+multidict==6.0.4
+murmurhash==1.0.9
+nbclassic @ file:///C:/b/abs_d0_ze5q0j2/croot/nbclassic_1676902914817/work
+nbclient @ file:///C:/ci/nbclient_1650308592199/work
+nbconvert @ file:///C:/b/abs_4av3q4okro/croot/nbconvert_1668450658054/work
+nbformat @ file:///C:/b/abs_85_3g7dkt4/croot/nbformat_1670352343720/work
+nest-asyncio @ file:///C:/b/abs_3a_4jsjlqu/croot/nest-asyncio_1672387322800/work
+nltk==3.8.1
+nodeenv==1.7.0
+notebook @ file:///C:/b/abs_ca13hqvuzw/croot/notebook_1668179888546/work
+notebook_shim @ file:///C:/b/abs_ebfczttg6x/croot/notebook-shim_1668160590914/work
+numpy==1.24.2
+openpyxl==3.1.2
+packaging==23.0
+pandas==1.5.3
+pandocfilters @ file:///opt/conda/conda-bld/pandocfilters_1643405455980/work
+parsel==1.7.0
+parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
+pathspec==0.11.0
+pathy==0.10.1
+pesq==0.0.4
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+Pillow==9.4.0
+platformdirs==3.1.1
+pluggy==0.13.1
+ply==3.11
+pooch @ file:///tmp/build/80754af9/pooch_1623324770023/work
+pre-commit==3.1.1
+preshed==3.0.8
+prometheus-client @ file:///C:/Windows/TEMP/abs_ab9nx8qb08/croots/recipe/prometheus_client_1659455104602/work
+prompt-toolkit @ file:///C:/b/abs_6coz5_9f2s/croot/prompt-toolkit_1672387908312/work
+Protego==0.2.1
+psutil @ file:///C:/Windows/Temp/abs_b2c2fd7f-9fd5-4756-95ea-8aed74d0039flsd9qufz/croots/recipe/psutil_1656431277748/work
+pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
+py==1.11.0
+py4j==0.10.9.5
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycares==4.3.0
+pycodestyle==2.5.0
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pydantic==1.10.5
+PyDispatcher==2.0.7
+pyflakes==2.1.1
+pyFUME==0.2.25
+Pygments @ file:///opt/conda/conda-bld/pygments_1644249106324/work
+pyOpenSSL @ file:///C:/b/abs_552w85x1jz/croot/pyopenssl_1677607703691/work
+pyparsing==3.0.9
+PyQt5==5.15.7
+PyQt5-sip @ file:///C:/Windows/Temp/abs_d7gmd2jg8i/croots/recipe/pyqt-split_1659273064801/work/pyqt_sip
+pyrsistent @ file:///C:/ci_310/pyrsistent_1642117077485/work
+PySocks @ file:///C:/ci_310/pysocks_1642089375450/work
+pyspark==3.3.2
+pytest==5.4.1
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+pytz==2022.7.1
+pywin32==305.1
+pywinpty @ file:///C:/b/abs_73vshmevwq/croot/pywinpty_1677609966356/work/target/wheels/pywinpty-2.0.10-cp310-none-win_amd64.whl
+PyYAML==6.0
+pyzmq @ file:///C:/ci/pyzmq_1657616000714/work
+qtconsole @ file:///C:/b/abs_5bap7f8n0t/croot/qtconsole_1674008444833/work
+QtPy @ file:///C:/ci/qtpy_1662015130233/work
+queuelib==1.6.2
+regex==2022.10.31
+requests==2.28.2
+requests-file==1.5.1
+ruamel.yaml==0.17.21
+ruamel.yaml.clib==0.2.7
+schedule==1.1.0
+scikit-learn @ file:///C:/b/abs_7ck_bnw91r/croot/scikit-learn_1676911676133/work
+scipy==1.10.0
+Scrapy==2.8.0
+Send2Trash @ file:///tmp/build/80754af9/send2trash_1632406701022/work
+sentencepiece==0.1.97
+service-identity==21.1.0
+simpful==2.9.0
+sip @ file:///C:/Windows/Temp/abs_b8fxd17m2u/croots/recipe/sip_1659012372737/work
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+smart-open==6.3.0
+sniffio @ file:///C:/ci_310/sniffio_1642092172680/work
+snscrape==0.6.1.20230314
+sounddevice==0.4.6
+soundfile==0.12.1
+soupsieve==2.4
+spacy==3.5.0
+spacy-legacy==3.0.12
+spacy-loggers==1.0.4
+speechbrain==0.5.13
+srsly==2.4.5
+stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
+terminado @ file:///C:/b/abs_25nakickad/croot/terminado_1671751845491/work
+thinc==8.1.7
+threadpoolctl @ file:///Users/ktietz/demo/mc3/conda-bld/threadpoolctl_1629802263681/work
+tinycss2 @ file:///C:/b/abs_52w5vfuaax/croot/tinycss2_1668168823131/work
+tldextract==3.4.0
+toml @ file:///tmp/build/80754af9/toml_1616166611790/work
+tomli @ file:///C:/Windows/TEMP/abs_ac109f85-a7b3-4b4d-bcfd-52622eceddf0hy332ojo/croots/recipe/tomli_1657175513137/work
+torch==1.13.1
+torchaudio==0.13.1
+torchvision==0.14.1
+tornado @ file:///C:/ci/tornado_1662476985533/work
+tqdm==4.64.1
+traitlets @ file:///C:/b/abs_e5m_xjjl94/croot/traitlets_1671143896266/work
+twint==2.1.21
+Twisted==22.10.0
+twisted-iocpsupport==1.0.2
+typed-ast==1.5.4
+typer==0.7.0
+typing_extensions==4.5.0
+urllib3 @ file:///C:/b/abs_9bcwxczrvm/croot/urllib3_1673575521331/work
+virtualenv==20.20.0
+w3lib==2.1.1
+wasabi==1.1.1
+Wave==0.0.2
+wcwidth==0.2.6
+webencodings==0.5.1
+websocket-client @ file:///C:/ci_310/websocket-client_1642093970919/work
+widgetsnbextension @ file:///C:/ci/widgetsnbextension_1645009839917/work
+win-inet-pton @ file:///C:/ci_310/win_inet_pton_1642658466512/work
+wincertstore==0.2
+yamllint==1.23.0
+yarl==1.8.2
+zope.interface==5.5.2
+
+
+2023-03-22 17:30:53,287 - speechbrain.utils.superpowers - DEBUG - 9edb954
+
+
+2023-03-22 17:30:53,308 - data_prepare - INFO - Creating .\\.\results\4234-1\\train.json, .\\.\results\4234-1\\valid.json, and .\\.\results\4234-1\\test.json
+2023-03-22 17:31:26,490 - data_prepare - INFO - .\\.\results\4234-1\\train.json successfully created!
+2023-03-22 17:31:29,664 - data_prepare - INFO - .\\.\results\4234-1\\valid.json successfully created!
+2023-03-22 17:31:34,384 - data_prepare - INFO - .\\.\results\4234-1\\test.json successfully created!
+2023-03-22 17:31:36,458 - speechbrain.core - INFO - 3.4M trainable parameters in SEBrain
+2023-03-22 17:31:36,458 - speechbrain.utils.checkpoints - INFO - Would load a checkpoint here, but none found yet.
+2023-03-22 17:31:36,458 - speechbrain.utils.epoch_loop - INFO - Going into epoch 1
+2023-03-22 17:37:19,122 - speechbrain.utils.train_logger - INFO - Epoch: 1 - train loss: 2.37e-02 - valid loss: 1.18e-02, valid stoi: 6.32e-01
+2023-03-22 17:37:19,174 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+17-37-19+00
+2023-03-22 17:37:19,184 - speechbrain.utils.epoch_loop - INFO - Going into epoch 2
+2023-03-22 17:40:47,037 - speechbrain.utils.train_logger - INFO - Epoch: 2 - train loss: 1.04e-02 - valid loss: 9.74e-03, valid stoi: 6.40e-01
+2023-03-22 17:40:47,085 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+17-40-47+00
+2023-03-22 17:40:47,105 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+17-37-19+00
+2023-03-22 17:40:47,105 - speechbrain.utils.epoch_loop - INFO - Going into epoch 3
+2023-03-22 17:43:33,438 - speechbrain.utils.train_logger - INFO - Epoch: 3 - train loss: 8.98e-03 - valid loss: 8.58e-03, valid stoi: 6.48e-01
+2023-03-22 17:43:33,499 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+17-43-33+00
+2023-03-22 17:43:33,533 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+17-40-47+00
+2023-03-22 17:43:33,533 - speechbrain.utils.epoch_loop - INFO - Going into epoch 4
+2023-03-22 17:45:32,565 - speechbrain.utils.train_logger - INFO - Epoch: 4 - train loss: 8.33e-03 - valid loss: 9.10e-03, valid stoi: 6.51e-01
+2023-03-22 17:45:32,616 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+17-45-32+00
+2023-03-22 17:45:32,644 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+17-43-33+00
+2023-03-22 17:45:32,645 - speechbrain.utils.epoch_loop - INFO - Going into epoch 5
+2023-03-22 17:47:22,678 - speechbrain.utils.train_logger - INFO - Epoch: 5 - train loss: 8.01e-03 - valid loss: 7.91e-03, valid stoi: 6.55e-01
+2023-03-22 17:47:22,731 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+17-47-22+00
+2023-03-22 17:47:22,763 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+17-45-32+00
+2023-03-22 17:47:22,763 - speechbrain.utils.epoch_loop - INFO - Going into epoch 6
+2023-03-22 17:49:13,538 - speechbrain.utils.train_logger - INFO - Epoch: 6 - train loss: 7.64e-03 - valid loss: 7.58e-03, valid stoi: 6.59e-01
+2023-03-22 17:49:13,590 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+17-49-13+00
+2023-03-22 17:49:13,626 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+17-47-22+00
+2023-03-22 17:49:13,626 - speechbrain.utils.epoch_loop - INFO - Going into epoch 7
+2023-03-22 17:51:06,889 - speechbrain.utils.train_logger - INFO - Epoch: 7 - train loss: 7.43e-03 - valid loss: 7.40e-03, valid stoi: 6.62e-01
+2023-03-22 17:51:06,942 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+17-51-06+00
+2023-03-22 17:51:06,980 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+17-49-13+00
+2023-03-22 17:51:06,981 - speechbrain.utils.epoch_loop - INFO - Going into epoch 8
+2023-03-22 17:52:56,491 - speechbrain.utils.train_logger - INFO - Epoch: 8 - train loss: 7.15e-03 - valid loss: 7.24e-03, valid stoi: 6.66e-01
+2023-03-22 17:52:56,540 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+17-52-56+00
+2023-03-22 17:52:56,586 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+17-51-06+00
+2023-03-22 17:52:56,586 - speechbrain.utils.epoch_loop - INFO - Going into epoch 9
+2023-03-22 17:54:47,413 - speechbrain.utils.train_logger - INFO - Epoch: 9 - train loss: 7.30e-03 - valid loss: 8.56e-03, valid stoi: 6.58e-01
+2023-03-22 17:54:47,461 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+17-54-47+00
+2023-03-22 17:54:47,511 - speechbrain.utils.epoch_loop - INFO - Going into epoch 10
+2023-03-22 17:56:38,803 - speechbrain.utils.train_logger - INFO - Epoch: 10 - train loss: 7.41e-03 - valid loss: 7.10e-03, valid stoi: 6.68e-01
+2023-03-22 17:56:38,855 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+17-56-38+00
+2023-03-22 17:56:38,933 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+17-52-56+00
+2023-03-22 17:56:38,939 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+17-54-47+00
+2023-03-22 17:56:38,939 - speechbrain.utils.epoch_loop - INFO - Going into epoch 11
+2023-03-22 17:58:29,028 - speechbrain.utils.train_logger - INFO - Epoch: 11 - train loss: 6.91e-03 - valid loss: 6.93e-03, valid stoi: 6.70e-01
+2023-03-22 17:58:29,080 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+17-58-29+00
+2023-03-22 17:58:29,141 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+17-56-38+00
+2023-03-22 17:58:29,141 - speechbrain.utils.epoch_loop - INFO - Going into epoch 12
+2023-03-22 18:00:19,128 - speechbrain.utils.train_logger - INFO - Epoch: 12 - train loss: 6.80e-03 - valid loss: 6.79e-03, valid stoi: 6.72e-01
+2023-03-22 18:00:19,182 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+18-00-19+00
+2023-03-22 18:00:19,246 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+17-58-29+00
+2023-03-22 18:00:19,246 - speechbrain.utils.epoch_loop - INFO - Going into epoch 13
+2023-03-22 18:02:08,731 - speechbrain.utils.train_logger - INFO - Epoch: 13 - train loss: 6.59e-03 - valid loss: 6.65e-03, valid stoi: 6.74e-01
+2023-03-22 18:02:08,784 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+18-02-08+00
+2023-03-22 18:02:08,850 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+18-00-19+00
+2023-03-22 18:02:08,851 - speechbrain.utils.epoch_loop - INFO - Going into epoch 14
+2023-03-22 18:03:57,812 - speechbrain.utils.train_logger - INFO - Epoch: 14 - train loss: 6.44e-03 - valid loss: 6.53e-03, valid stoi: 6.75e-01
+2023-03-22 18:03:57,861 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+18-03-57+00
+2023-03-22 18:03:57,927 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+18-02-08+00
+2023-03-22 18:03:57,927 - speechbrain.utils.epoch_loop - INFO - Going into epoch 15
+2023-03-22 18:05:47,271 - speechbrain.utils.train_logger - INFO - Epoch: 15 - train loss: 6.31e-03 - valid loss: 6.50e-03, valid stoi: 6.76e-01
+2023-03-22 18:05:47,325 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+18-05-47+00
+2023-03-22 18:05:47,401 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+18-03-57+00
+2023-03-22 18:05:47,402 - speechbrain.utils.epoch_loop - INFO - Going into epoch 16
+2023-03-22 18:07:36,651 - speechbrain.utils.train_logger - INFO - Epoch: 16 - train loss: 6.20e-03 - valid loss: 6.36e-03, valid stoi: 6.77e-01
+2023-03-22 18:07:36,704 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+18-07-36+00
+2023-03-22 18:07:36,784 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+18-05-47+00
+2023-03-22 18:07:36,785 - speechbrain.utils.epoch_loop - INFO - Going into epoch 17
+2023-03-22 18:09:25,634 - speechbrain.utils.train_logger - INFO - Epoch: 17 - train loss: 6.09e-03 - valid loss: 6.56e-03, valid stoi: 6.77e-01
+2023-03-22 18:09:25,686 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+18-09-25+00
+2023-03-22 18:09:25,773 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+18-07-36+00
+2023-03-22 18:09:25,773 - speechbrain.utils.epoch_loop - INFO - Going into epoch 18
+2023-03-22 18:11:13,241 - speechbrain.utils.train_logger - INFO - Epoch: 18 - train loss: 6.03e-03 - valid loss: 6.24e-03, valid stoi: 6.78e-01
+2023-03-22 18:11:13,295 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+18-11-13+00
+2023-03-22 18:11:13,381 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+18-09-25+00
+2023-03-22 18:11:13,381 - speechbrain.utils.epoch_loop - INFO - Going into epoch 19
+2023-03-22 18:13:00,344 - speechbrain.utils.train_logger - INFO - Epoch: 19 - train loss: 5.92e-03 - valid loss: 6.15e-03, valid stoi: 6.79e-01
+2023-03-22 18:13:00,392 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+18-13-00+00
+2023-03-22 18:13:00,490 - speechbrain.utils.checkpoints - INFO - Deleted checkpoint in results\4234-1\save\CKPT+2023-03-22+18-11-13+00
+2023-03-22 18:13:00,491 - speechbrain.utils.epoch_loop - INFO - Going into epoch 20
+2023-03-22 18:14:51,302 - speechbrain.utils.train_logger - INFO - Epoch: 20 - train loss: 5.84e-03 - valid loss: 6.04e-03, valid stoi: 6.80e-01
+2023-03-22 18:14:51,391 - speechbrain.utils.checkpoints - INFO - Saved an end-of-epoch checkpoint in results\4234-1\save\CKPT+2023-03-22+18-14-51+00
+2023-03-22 18:14:51,486 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "E:\Dropbox\Courses\Team project\enhancement\train.py", line 297, in <module>
+    se_brain.fit(
+  File "C:\Users\11935\anaconda3\envs\py310\lib\site-packages\speechbrain\core.py", line 1154, in fit
+    self._fit_valid(valid_set=valid_set, epoch=epoch, enable=enable)
+  File "C:\Users\11935\anaconda3\envs\py310\lib\site-packages\speechbrain\core.py", line 1070, in _fit_valid
+    run_on_main(
+  File "C:\Users\11935\anaconda3\envs\py310\lib\site-packages\speechbrain\utils\distributed.py", line 61, in run_on_main
+    func(*args, **kwargs)
+  File "E:\Dropbox\Courses\Team project\enhancement\train.py", line 189, in on_stage_end
+    self.checkpointer.save_and_keep_only(meta=stats, max_keys=["stoi"])
+  File "C:\Users\11935\anaconda3\envs\py310\lib\site-packages\speechbrain\utils\checkpoints.py", line 634, in save_and_keep_only
+    self.delete_checkpoints(
+  File "C:\Users\11935\anaconda3\envs\py310\lib\site-packages\speechbrain\utils\checkpoints.py", line 946, in delete_checkpoints
+    Checkpointer._delete_checkpoint(ckpt, verbosity=verbosity)
+  File "C:\Users\11935\anaconda3\envs\py310\lib\site-packages\speechbrain\utils\checkpoints.py", line 952, in _delete_checkpoint
+    shutil.rmtree(checkpoint.path)
+  File "C:\Users\11935\anaconda3\envs\py310\lib\shutil.py", line 750, in rmtree
+    return _rmtree_unsafe(path, onerror)
+  File "C:\Users\11935\anaconda3\envs\py310\lib\shutil.py", line 624, in _rmtree_unsafe
+    onerror(os.rmdir, path, sys.exc_info())
+  File "C:\Users\11935\anaconda3\envs\py310\lib\shutil.py", line 622, in _rmtree_unsafe
+    os.rmdir(path)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'results\\4234-1\\save\\CKPT+2023-03-22+18-13-00+00'
+2023-03-22 18:24:25,583 - speechbrain.core - INFO - Beginning experiment!
+2023-03-22 18:24:25,583 - speechbrain.core - INFO - Experiment folder: .\results\4234-1
+2023-03-22 18:24:27,285 - speechbrain.utils.superpowers - DEBUG - aiodns==3.0.0
+aiohttp==3.7.0
+aiohttp-socks==0.4.1
+aiosignal==1.3.1
+anyio @ file:///C:/ci/anyio_1644481856696/work/dist
+appdirs==1.4.4
+argon2-cffi @ file:///opt/conda/conda-bld/argon2-cffi_1645000214183/work
+argon2-cffi-bindings @ file:///C:/ci/argon2-cffi-bindings_1644569876605/work
+asttokens @ file:///opt/conda/conda-bld/asttokens_1646925590279/work
+async-timeout==3.0.1
+atomicwrites==1.4.1
+attrs==22.2.0
+Automat==22.10.0
+Babel @ file:///C:/b/abs_a2shv_3tqi/croot/babel_1671782804377/work
+backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
+beautifulsoup4==4.11.2
+black==19.10b0
+bleach @ file:///opt/conda/conda-bld/bleach_1641577558959/work
+blis==0.7.9
+brotlipy==0.7.0
+catalogue==2.0.8
+cchardet==2.1.7
+certifi @ file:///C:/b/abs_85o_6fm0se/croot/certifi_1671487778835/work/certifi
+cffi @ file:///C:/b/abs_49n3v2hyhr/croot/cffi_1670423218144/work
+cfgv==3.3.1
+chardet==3.0.4
+charset-normalizer==3.0.1
+click==8.0.4
+colorama @ file:///C:/b/abs_a9ozq0l032/croot/colorama_1672387194846/work
+comm @ file:///C:/b/abs_1419earm7u/croot/comm_1671231131638/work
+confection==0.0.4
+constantly==15.1.0
+contourpy==1.0.7
+cryptography @ file:///C:/b/abs_8ecplyc3n2/croot/cryptography_1677533105000/work
+cssselect==1.2.0
+cycler==0.11.0
+cymem==2.0.7
+Cython==0.29.32
+dataclasses==0.6
+debugpy @ file:///C:/ci_310/debugpy_1642079916595/work
+decorator @ file:///opt/conda/conda-bld/decorator_1643638310831/work
+defusedxml @ file:///tmp/build/80754af9/defusedxml_1615228127516/work
+distlib==0.3.6
+elastic-transport==8.4.0
+elasticsearch==8.6.2
+elasticsearch-dsl==7.4.1
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl
+entrypoints @ file:///C:/ci/entrypoints_1649926676279/work
+et-xmlfile==1.1.0
+executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
+fake-useragent==1.1.1
+fastjsonschema @ file:///C:/Users/BUILDE~1/AppData/Local/Temp/abs_ebruxzvd08/croots/recipe/python-fastjsonschema_1661376484940/work
+filelock==3.9.0
+flake8==3.7.9
+flit_core @ file:///opt/conda/conda-bld/flit-core_1644941570762/work/source/flit_core
+fonttools==4.38.0
+frozenlist==1.3.3
+fst-pso==1.8.1
+FuzzyTM==2.0.5
+gensim==4.3.0
+geographiclib==2.0
+geopy==2.3.0
+googletransx==2.4.2
+huggingface-hub==0.13.1
+hyperlink==21.0.0
+HyperPyYAML==1.1.0
+identify==2.5.19
+idna @ file:///C:/b/abs_bdhbebrioa/croot/idna_1666125572046/work
+incremental==22.10.0
+ipykernel @ file:///C:/b/abs_b4f07tbsyd/croot/ipykernel_1672767104060/work
+ipython @ file:///C:/b/abs_d3h279dv3h/croot/ipython_1676582236558/work
+ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
+ipywidgets @ file:///tmp/build/80754af9/ipywidgets_1634143127070/work
+itemadapter==0.7.0
+itemloaders==1.0.6
+jedi @ file:///C:/ci/jedi_1644315428305/work
+Jinja2 @ file:///C:/b/abs_7cdis66kl9/croot/jinja2_1666908141852/work
+jmespath==1.0.1
+joblib==1.2.0
+json5 @ file:///tmp/build/80754af9/json5_1624432770122/work
+jsonschema @ file:///C:/b/abs_6ccs97j_l8/croot/jsonschema_1676558690963/work
+jupyter @ file:///C:/Windows/TEMP/abs_56xfdi__li/croots/recipe/jupyter_1659349053177/work
+jupyter-console @ file:///C:/b/abs_68ttzd5p9c/croot/jupyter_console_1677674667636/work
+jupyter-server @ file:///C:/b/abs_1cfi3__jl8/croot/jupyter_server_1671707636383/work
+jupyter_client @ file:///C:/b/abs_d8fk_kz9zk/croot/jupyter_client_1676330195659/work
+jupyter_core @ file:///C:/b/abs_bd7elvu3w2/croot/jupyter_core_1676538600510/work
+jupyterlab @ file:///C:/b/abs_513jt6yy74/croot/jupyterlab_1675354138043/work
+jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
+jupyterlab-widgets @ file:///tmp/build/80754af9/jupyterlab_widgets_1609884341231/work
+jupyterlab_server @ file:///C:/b/abs_d1z_g1swc8/croot/jupyterlab_server_1677153204814/work
+kiwisolver==1.4.4
+langcodes==3.3.0
+lxml==4.9.2
+MarkupSafe==2.1.2
+matplotlib==3.7.0
+matplotlib-inline @ file:///C:/ci/matplotlib-inline_1661934094726/work
+mccabe==0.6.1
+miniful==0.0.6
+mistune @ file:///C:/ci_310/mistune_1642084168466/work
+mkl-fft==1.3.1
+mkl-random @ file:///C:/ci_310/mkl_random_1643050563308/work
+mkl-service==2.4.0
+more-itertools==9.1.0
+multidict==6.0.4
+murmurhash==1.0.9
+nbclassic @ file:///C:/b/abs_d0_ze5q0j2/croot/nbclassic_1676902914817/work
+nbclient @ file:///C:/ci/nbclient_1650308592199/work
+nbconvert @ file:///C:/b/abs_4av3q4okro/croot/nbconvert_1668450658054/work
+nbformat @ file:///C:/b/abs_85_3g7dkt4/croot/nbformat_1670352343720/work
+nest-asyncio @ file:///C:/b/abs_3a_4jsjlqu/croot/nest-asyncio_1672387322800/work
+nltk==3.8.1
+nodeenv==1.7.0
+notebook @ file:///C:/b/abs_ca13hqvuzw/croot/notebook_1668179888546/work
+notebook_shim @ file:///C:/b/abs_ebfczttg6x/croot/notebook-shim_1668160590914/work
+numpy==1.24.2
+openpyxl==3.1.2
+packaging==23.0
+pandas==1.5.3
+pandocfilters @ file:///opt/conda/conda-bld/pandocfilters_1643405455980/work
+parsel==1.7.0
+parso @ file:///opt/conda/conda-bld/parso_1641458642106/work
+pathspec==0.11.0
+pathy==0.10.1
+pesq==0.0.4
+pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+Pillow==9.4.0
+platformdirs==3.1.1
+pluggy==0.13.1
+ply==3.11
+pooch @ file:///tmp/build/80754af9/pooch_1623324770023/work
+pre-commit==3.1.1
+preshed==3.0.8
+prometheus-client @ file:///C:/Windows/TEMP/abs_ab9nx8qb08/croots/recipe/prometheus_client_1659455104602/work
+prompt-toolkit @ file:///C:/b/abs_6coz5_9f2s/croot/prompt-toolkit_1672387908312/work
+Protego==0.2.1
+psutil @ file:///C:/Windows/Temp/abs_b2c2fd7f-9fd5-4756-95ea-8aed74d0039flsd9qufz/croots/recipe/psutil_1656431277748/work
+pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
+py==1.11.0
+py4j==0.10.9.5
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycares==4.3.0
+pycodestyle==2.5.0
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pydantic==1.10.5
+PyDispatcher==2.0.7
+pyflakes==2.1.1
+pyFUME==0.2.25
+Pygments @ file:///opt/conda/conda-bld/pygments_1644249106324/work
+pyOpenSSL @ file:///C:/b/abs_552w85x1jz/croot/pyopenssl_1677607703691/work
+pyparsing==3.0.9
+PyQt5==5.15.7
+PyQt5-sip @ file:///C:/Windows/Temp/abs_d7gmd2jg8i/croots/recipe/pyqt-split_1659273064801/work/pyqt_sip
+pyrsistent @ file:///C:/ci_310/pyrsistent_1642117077485/work
+PySocks @ file:///C:/ci_310/pysocks_1642089375450/work
+pyspark==3.3.2
+pytest==5.4.1
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+pytz==2022.7.1
+pywin32==305.1
+pywinpty @ file:///C:/b/abs_73vshmevwq/croot/pywinpty_1677609966356/work/target/wheels/pywinpty-2.0.10-cp310-none-win_amd64.whl
+PyYAML==6.0
+pyzmq @ file:///C:/ci/pyzmq_1657616000714/work
+qtconsole @ file:///C:/b/abs_5bap7f8n0t/croot/qtconsole_1674008444833/work
+QtPy @ file:///C:/ci/qtpy_1662015130233/work
+queuelib==1.6.2
+regex==2022.10.31
+requests==2.28.2
+requests-file==1.5.1
+ruamel.yaml==0.17.21
+ruamel.yaml.clib==0.2.7
+schedule==1.1.0
+scikit-learn @ file:///C:/b/abs_7ck_bnw91r/croot/scikit-learn_1676911676133/work
+scipy==1.10.0
+Scrapy==2.8.0
+Send2Trash @ file:///tmp/build/80754af9/send2trash_1632406701022/work
+sentencepiece==0.1.97
+service-identity==21.1.0
+simpful==2.9.0
+sip @ file:///C:/Windows/Temp/abs_b8fxd17m2u/croots/recipe/sip_1659012372737/work
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+smart-open==6.3.0
+sniffio @ file:///C:/ci_310/sniffio_1642092172680/work
+snscrape==0.6.1.20230314
+sounddevice==0.4.6
+soundfile==0.12.1
+soupsieve==2.4
+spacy==3.5.0
+spacy-legacy==3.0.12
+spacy-loggers==1.0.4
+speechbrain==0.5.13
+srsly==2.4.5
+stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
+terminado @ file:///C:/b/abs_25nakickad/croot/terminado_1671751845491/work
+thinc==8.1.7
+threadpoolctl @ file:///Users/ktietz/demo/mc3/conda-bld/threadpoolctl_1629802263681/work
+tinycss2 @ file:///C:/b/abs_52w5vfuaax/croot/tinycss2_1668168823131/work
+tldextract==3.4.0
+toml @ file:///tmp/build/80754af9/toml_1616166611790/work
+tomli @ file:///C:/Windows/TEMP/abs_ac109f85-a7b3-4b4d-bcfd-52622eceddf0hy332ojo/croots/recipe/tomli_1657175513137/work
+torch==1.13.1
+torchaudio==0.13.1
+torchvision==0.14.1
+tornado @ file:///C:/ci/tornado_1662476985533/work
+tqdm==4.64.1
+traitlets @ file:///C:/b/abs_e5m_xjjl94/croot/traitlets_1671143896266/work
+twint==2.1.21
+Twisted==22.10.0
+twisted-iocpsupport==1.0.2
+typed-ast==1.5.4
+typer==0.7.0
+typing_extensions==4.5.0
+urllib3 @ file:///C:/b/abs_9bcwxczrvm/croot/urllib3_1673575521331/work
+virtualenv==20.20.0
+w3lib==2.1.1
+wasabi==1.1.1
+Wave==0.0.2
+wcwidth==0.2.6
+webencodings==0.5.1
+websocket-client @ file:///C:/ci_310/websocket-client_1642093970919/work
+widgetsnbextension @ file:///C:/ci/widgetsnbextension_1645009839917/work
+win-inet-pton @ file:///C:/ci_310/win_inet_pton_1642658466512/work
+wincertstore==0.2
+yamllint==1.23.0
+yarl==1.8.2
+zope.interface==5.5.2
+
+
+2023-03-22 18:24:27,322 - speechbrain.utils.superpowers - DEBUG - 9edb954
+
+
+2023-03-22 18:24:27,347 - data_prepare - INFO - Preparation completed in previous run, skipping.
+2023-03-22 18:24:31,733 - speechbrain.core - INFO - 3.4M trainable parameters in SEBrain
+2023-03-22 18:24:31,735 - speechbrain.utils.checkpoints - INFO - Loading a checkpoint from results\4234-1\save\CKPT+2023-03-22+18-14-51+00
+2023-03-22 18:24:31,795 - speechbrain.utils.checkpoints - INFO - Loading a checkpoint from results\4234-1\save\CKPT+2023-03-22+18-14-51+00
+2023-03-22 18:26:43,529 - speechbrain.utils.train_logger - INFO - Epoch loaded: 20 - test loss: 5.97e-03, test stoi: 6.82e-01
