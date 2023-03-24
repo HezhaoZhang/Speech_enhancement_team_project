@@ -2,7 +2,8 @@ import os
 import zipfile
 import shutil
 from sklearn.model_selection import train_test_split
-from  tqdm import tqdm
+from tqdm import tqdm
+
 
 def split_wav_files(zip_file_path, train_ratio=0.7, test_ratio=0.2, random_state=None):
     base_name = os.path.join("data", os.path.splitext(os.path.basename(zip_file_path))[0])
@@ -25,7 +26,7 @@ def split_wav_files(zip_file_path, train_ratio=0.7, test_ratio=0.2, random_state
                                                    random_state=random_state)
 
         def save_wav_files(files, folder):
-            for file_name in tqdm(files),desc=f"move to {folder}":
+            for file_name in tqdm(files, desc=f"move to {folder}"):
                 with zip_file.open(file_name) as wav_file:
                     output_path = os.path.join(folder, os.path.basename(file_name))
                     with open(output_path, 'wb') as output_file:
