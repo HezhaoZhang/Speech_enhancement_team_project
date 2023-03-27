@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 
 def split_wav_files(zip_file_path, train_ratio=0.7, test_ratio=0.2, random_state=None):
-    base_name = os.path.join("data", os.path.splitext(os.path.basename(zip_file_path))[0])
+    base_name = os.path.join("data", os.path.splitext(os.path.basename(zip_file_path))[0]+"-split")
 
     os.makedirs(base_name, exist_ok=True)
 

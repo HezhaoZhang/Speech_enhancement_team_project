@@ -8,7 +8,7 @@
 # #################################
 
 # Seed needs to be set at top of yaml, before objects with parameters are made
-dataset_id: 1
+dataset_id: 3
 seed: 4234
 __set_seed: !!python/object/apply:torch.manual_seed [!ref <seed>]
 
@@ -22,7 +22,7 @@ __set_seed: !!python/object/apply:torch.manual_seed [!ref <seed>]
 # 4- Set data_folder with the local path.
 # Reading data from the local disk of the compute node (e.g. $SLURM_TMPDIR with SLURM-based clusters) is very important.
 # It allows you to read the data much faster without slowing down the shared filesystem.
-data_folder: !ref ..\data\corpus-<dataset_id>
+data_folder: !ref ..\data\corpus-<dataset_id>-split
 output_folder: !ref .\results\<seed>-<dataset_id>
 save_folder: !ref <output_folder>/save
 train_log: !ref <output_folder>/train_log.txt
