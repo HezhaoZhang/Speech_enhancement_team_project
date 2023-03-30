@@ -224,7 +224,7 @@ def dataio_prep(hparams):
         """Load the signal, and pass it and its length to the corruption class.
         This is done on the CPU in the `collate_fn`."""
         clean_sig = sb.dataio.dataio.read_audio(wav.replace(f'corpus-{hparams["dataset_id"]}', 'corpus-0'))
-        noisy_sig = sb.dataio.dataio.read_audio(wav)
+        noisy_sig = sb.dataio.dataio.read_audio(wav).mean(dim=1)
         return noisy_sig, clean_sig
 
     # Define datasets sorted by ascending lengths for efficiency
