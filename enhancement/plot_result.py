@@ -2,9 +2,9 @@ import re
 import matplotlib.pyplot as plt
 import os
 
-dataset_id = 1
+dataset_id = 2
 # Read the data from the text file
-with open(f'results/4234-{1}/train_log.txt', 'r') as f:
+with open(f'results/4234-{dataset_id}/train_log.txt', 'r') as f:
     data = f.read()
 
 epochs, train_losses, valid_losses, valid_stois = [], [], [], []

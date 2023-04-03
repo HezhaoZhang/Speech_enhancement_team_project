@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 
 def split_wav_files(zip_file_path, train_ratio=0.7, test_ratio=0.2, random_state=None):
-    base_name = os.path.join("data", os.path.splitext(os.path.basename(zip_file_path))[0]+"-split")
+    base_name = os.path.join("../data", os.path.splitext(os.path.basename(zip_file_path))[0] + "-split")
 
     os.makedirs(base_name, exist_ok=True)
 
@@ -38,5 +38,5 @@ def split_wav_files(zip_file_path, train_ratio=0.7, test_ratio=0.2, random_state
 
 
 # Exract all wav files from corpus zip file and split into train/text/valid folders under data/corpus-id/
-zip_file_path = 'data/corpus/corpus-0.zip'
+zip_file_path = '../data/corpus/corpus-3_3.zip'
 split_wav_files(zip_file_path, random_state=42)
