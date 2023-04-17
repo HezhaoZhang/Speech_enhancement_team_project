@@ -5,14 +5,13 @@ from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 
 
-def split_wav_files(zip_file_path, train_ratio=0.7, test_ratio=0.2, random_state=None):
-    base_name = os.path.join("../data", os.path.splitext(os.path.basename(zip_file_path))[0] + "-split")
+def split_wav_files(zip_file_path, output_path, train_ratio=0.7, test_ratio=0.2, random_state=None):
+    output_path = os.path.join(output_path, os.path.splitext(os.path.basename(zip_file_path))[0] + "-split")
+    os.makedirs(output_path, exist_ok=True)
 
-    os.makedirs(base_name, exist_ok=True)
-
-    train_dir = os.path.join(base_name, 'train')
-    test_dir = os.path.join(base_name, 'test')
-    valid_dir = os.path.join(base_name, 'valid')
+    train_dir = os.path.join(output_path, 'train')
+    test_dir = os.path.join(output_path, 'test')
+    valid_dir = os.path.join(output_path, 'valid')
     os.makedirs(train_dir, exist_ok=True)
     os.makedirs(test_dir, exist_ok=True)
     os.makedirs(valid_dir, exist_ok=True)
@@ -38,5 +37,6 @@ def split_wav_files(zip_file_path, train_ratio=0.7, test_ratio=0.2, random_state
 
 
 # Exract all wav files from corpus zip file and split into train/text/valid folders under data/corpus-id/
-zip_file_path = '../data/corpus/corpus-3_3.zip'
-split_wav_files(zip_file_path, random_state=42)
+zip_file_path = '/fastdata/acp22hz/corpus-3_1.zip'
+output_path = '/scratch'
+split_wav_files(zip_file_path, output_path, random_state=42)
