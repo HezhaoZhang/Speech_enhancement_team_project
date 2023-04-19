@@ -37,6 +37,11 @@ def split_wav_files(zip_file_path, output_path, train_ratio=0.7, test_ratio=0.2,
 
 
 # Exract all wav files from corpus zip file and split into train/text/valid folders under data/corpus-id/
+zip_file_path = '/fastdata/acp22hz/corpus-0.zip'
+output_path = '/scratch'
+split_wav_files(zip_file_path, output_path, random_state=42)
+
+
 zip_file_path = '/fastdata/acp22hz/corpus-3_1.zip'
 output_path = '/scratch'
 split_wav_files(zip_file_path, output_path, random_state=42)
