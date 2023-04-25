@@ -1,8 +1,9 @@
 #!/bin/bash
-#SBATCH --partition=dcs-gpu-test
+#SBATCH --partition=dcs-gpu
 #SBATCH --account=dcs-res
 #SBATCH --cpus-per-task=10
 #SBATCH --nodes=1
+#SBATCH --time=20:00:00
 #SBATCH --gpus-per-node=1
 #SBATCH --mem=32G
 #SBATCH --output=./results_hpc/output_%j.txt
