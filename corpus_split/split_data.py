@@ -2,8 +2,8 @@ import os
 import zipfile
 import shutil
 from sklearn.model_selection import train_test_split
-from tqdm import tqdm
-
+# from tqdm import tqdm
+import argparse
 
 def split_wav_files(zip_file_path, output_path, train_ratio=0.7, test_ratio=0.2, random_state=None):
     output_path = os.path.join(output_path, os.path.splitext(os.path.basename(zip_file_path))[0] + "-split")
@@ -25,7 +25,7 @@ def split_wav_files(zip_file_path, output_path, train_ratio=0.7, test_ratio=0.2,
                                                    random_state=random_state)
 
         def save_wav_files(files, folder):
-            for file_name in tqdm(files, desc=f"move to {folder}"):
+            for file_name in files:
                 with zip_file.open(file_name) as wav_file:
                     output_path = os.path.join(folder, os.path.basename(file_name))
                     with open(output_path, 'wb') as output_file:
@@ -35,8 +35,34 @@ def split_wav_files(zip_file_path, output_path, train_ratio=0.7, test_ratio=0.2,
         save_wav_files(test_files, test_dir)
         save_wav_files(valid_files, valid_dir)
 
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Split WAV files into train, test, and validation sets")
+    parser.add_argument("input_path", help="Path to the data folder containing the zip files")
+    parser.add_argument("output_path", help="Path where the split files will be saved")
+    parser.add_argument("data_id", help="dataset id")
+    args = parser.parse_args()
 
-# Exract all wav files from corpus zip file and split into train/text/valid folders under data/corpus-id/
-zip_file_path = '/fastdata/acp22hz/corpus-3_1.zip'
-output_path = '/scratch'
-split_wav_files(zip_file_path, output_path, random_state=42)
+    input_path = args.input_path
+    output_path = args.output_path
+    data_id = args.data_id
+
+    zip_file_path = os.path.join(input_path, 'corpus-0.zip')
+    split_wav_files(zip_file_path, output_path, random_state=42)
+
+    zip_file_path = os.path.join(input_path, f'corpus-{data_id}.zip')
+    split_wav_files(zip_file_path, output_path, random_state=42)
+
+    # Exract all wav files from corpus zip file and split into train/text/valid folders under data/corpus-id/
+    # bessemer
+    # data_folder = "/fastdata/acp22hz/"
+    # output_path = '/scratch'
+    # stanage
+    # data_folder = "/mnt/parscratch/users/acp22hz/"
+    # output_path = '/tmp/users/acp22hz/'
+
+    # zip_file_path = data_folder+'corpus-0.zip'
+    # split_wav_files(zip_file_path, output_path, random_state=42)
+
+
+    # zip_file_path = data_folder+'/corpus-3_1.zip'
+    # split_wav_files(zip_file_path, output_path, random_state=42)
