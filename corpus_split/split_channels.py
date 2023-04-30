@@ -14,7 +14,7 @@ def split_channels_task(wav_file, _input_folder, _channels, _output_folders):
     audio_channels = [audio[:, i:i + channels_per_folder] for i in range(0, _channels, channels_per_folder)]
 
     for idx, output_folder in enumerate(range(_output_folders)):
-        output_folder_name = f'{_input_folder}_{idx}'
+        output_folder_name = f'{_input_folder}-{idx}'
         if not os.path.exists(output_folder_name):
             os.makedirs(output_folder_name)
 

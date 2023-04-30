@@ -48,10 +48,11 @@ if __name__ == "__main__":
 
     zip_file_path = os.path.join(input_path, 'corpus-0.zip')
     split_wav_files(zip_file_path, output_path, random_state=42)
-
+    
+    print("output_path",output_path)
     zip_file_path = os.path.join(input_path, f'corpus-{data_id}.zip')
     split_wav_files(zip_file_path, output_path, random_state=42)
-
+    print("output_path",output_path)
     # Exract all wav files from corpus zip file and split into train/text/valid folders under data/corpus-id/
     # bessemer
     # data_folder = "/fastdata/acp22hz/"

@@ -1,1 +1,0 @@
-slurmstepd: error: *** JOB 15332 ON gpu02 CANCELLED AT 2023-04-20T00:24:52 ***
