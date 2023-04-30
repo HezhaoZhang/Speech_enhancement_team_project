@@ -4,7 +4,8 @@ import os
 
 dataset_id = 2
 # Read the data from the text file
-with open(f'results/4234-{dataset_id}/train_log.txt', 'r') as f:
+corpus_id = "4-9"
+with open(f'results_hpc/corpus-{corpus_id}/train_log.txt', 'r') as f:
     data = f.read()
 
 epochs, train_losses, valid_losses, valid_stois = [], [], [], []
@@ -23,7 +24,7 @@ ax1.plot(epochs, valid_losses, label="Valid Loss")
 ax1.set_xlabel("Epoch")
 ax1.set_ylabel("Loss")
 ax1.legend()
-ax1.set_title("Training and Validation Losses")
+ax1.set_title(f"Training and Validation Losses on corpus-{corpus_id}")
 ax1.grid()
 
 # Create the line plot for STOI
@@ -35,5 +36,5 @@ ax2.set_title("Validation STOI")
 ax2.grid()
 
 plt.tight_layout()
-plt.savefig(f'results/4234-{1}/result.png')
+plt.savefig(f'results/corpus-{corpus_id}-result.png')
 plt.show()
