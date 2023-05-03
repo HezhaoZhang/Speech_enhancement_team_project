@@ -31,7 +31,7 @@ def split_channels(input_wav_files, _input_folder, _channels, _output_folders):
 if __name__ == "__main__":
     input_folder = "../data/corpus/corpus-3"
     channels = 12
-    output_folders = 4
+    output_folders = 12
 
     wav_files = read_wav_files(input_folder)
     split_channels(wav_files, input_folder, channels, output_folders)

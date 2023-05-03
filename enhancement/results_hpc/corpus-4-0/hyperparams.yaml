@@ -1,5 +1,5 @@
-# Generated 2023-04-28 from:
-# /home/acp22hz/Speech_enhancement_team_project/enhancement/train_hpc.yaml
+# Generated 2023-05-03 from:
+# E:\Dropbox\Courses\Team project\enhancement\train_hpc.yaml
 # yamllint disable
 # #################################
 # Basic training parameters for enhancement.
@@ -27,12 +27,12 @@ __set_seed: !!python/object/apply:torch.manual_seed [4234]
 # Reading data from the local disk of the compute node (e.g. $SLURM_TMPDIR with SLURM-based clusters) is very important.
 # It allows you to read the data much faster without slowing down the shared filesystem.
 #data_folder: !ref /tmp/users/acp22hz/corpus-<dataset_id>-split
-scratch_path: /scratch/2946080
-data_folder: /scratch/2946080/corpus-4-0-split
+scratch_path: ../data/
+data_folder: ../data//corpus-4-0-split
 output_folder: ./results_hpc/corpus-4-0
 save_folder: ./results_hpc/corpus-4-0/save
 train_log: ./results_hpc/corpus-4-0/train_log.txt
-rir_folder: /scratch/2946080/corpus-4-0-split
+rir_folder: ../data//corpus-4-0-split
 
 # Path where data manifest files will be stored
 # The data manifest files are created by the data preparation script.

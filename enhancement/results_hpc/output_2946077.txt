@@ -1,3 +1,0 @@
-slurmstepd: error: *** JOB 2946077 ON bessemer-node035 CANCELLED AT 2023-04-28T09:42:15 ***
-rm: cannot remove ‘/scratch/2946077/corpus-0-split/train’: Directory not empty
-slurmstepd: error: --task-epilog failed status=256

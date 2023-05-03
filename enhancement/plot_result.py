@@ -36,5 +36,5 @@ ax2.set_title("Validation STOI")
 ax2.grid()
 
 plt.tight_layout()
-plt.savefig(f'results/corpus-{corpus_id}-result.png')
+plt.savefig(f'results_hpc/corpus-{corpus_id}-result.png')
 plt.show()
