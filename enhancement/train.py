@@ -268,7 +268,11 @@ def dataio_prep(hparams):
     def audio_pipeline(wav):
         """Load the signal, and pass it and its length to the corruption class.
         This is done on the CPU in the `collate_fn`."""
-        clean_sig = sb.dataio.dataio.read_audio(wav.replace(f'corpus-{hparams["dataset_id"]}', 'corpus-0'))
+        if "padded" not in hparams["dataset_id"]:
+            clean_file = wav.replace(f'corpus-{hparams["dataset_id"]}', 'corpus-0')
+        else:
+            clean_file = wav.replace(f'corpus-{hparams["dataset_id"]}', 'corpus-0-padded')
+        clean_sig = sb.dataio.dataio.read_audio(clean_file)
         # noisy_sig = sb.dataio.dataio.read_audio(wav).mean(dim=1)
         noisy_sig = sb.dataio.dataio.read_audio(wav)
         return noisy_sig, clean_sig
