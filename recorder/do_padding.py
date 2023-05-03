@@ -9,7 +9,7 @@ from pysepm import stoi
 
 def componsate_delay(s,x):
     d = compute_delay(s, x)
-    print("Delay is %d frames (%ss)"%(d,d/16000))
+    print("Delay is %d frames (%ss)"%(d,d/fs))
     s_padded = np.pad(s, (d,0), 'constant', constant_values=(0,0))
     x_padded = np.pad(x, (0,d), 'constant', constant_values=(0,0))
     return s_padded,x_padded
@@ -42,9 +42,9 @@ def compute_delay(s,x):
 
 if __name__ == "__main__":
     name = sys.argv[1]
-    s_path = "/media/george/stuff/VoiceBank/clean_trainset_28spk_wav/%s.wav"%name
-    x_path = "/media/george/stuff/VoiceBank/noisy_trainset_28spk_wav/%s.wav"%name
-    x2_path = "/media/george/2tbdrive/wavs_train_asl/%s.wav"%name
+    s_path = "../data/corpus/corpus-0/%s.wav"%name
+    x_path = "../data/corpus/corpus-1/%s.wav"%name
+    x2_path = "../data/corpus/corpus-4-0/%s.wav"%name
     s,fs = sf.read(s_path)
     x,fs = sf.read(x_path)
     x2,fs = sf.read(x2_path)
@@ -63,8 +63,6 @@ if __name__ == "__main__":
     plt.show()
 
     print("delay compensated:")
-
-
     s_padded,x2_padded = componsate_delay(s, x2)
     compute_delay(s_padded, x2_padded)
     print(stoi(s_padded,x2_padded,fs))
@@ -74,7 +72,7 @@ if __name__ == "__main__":
     plt.plot(x2_padded)
     plt.show()
     
-    sf.write("debug/%s_deg.wav "%name,x2_padded,fs)
+    sf.write("debug/%s_deg.wav"%name,x2_padded,fs)
     sf.write("debug/%s_ref.wav"%name,s_padded,fs)
 
 

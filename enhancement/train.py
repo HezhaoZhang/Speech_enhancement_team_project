@@ -21,8 +21,15 @@ Authors
 import sys
 import torch
 import speechbrain as sb
+import torchaudio
 from hyperpyyaml import load_hyperpyyaml
 from data_prepare import data_prepare
+import os
+
+enhanced_files = ['p334_275.wav', 'p363_217.wav', 'p307_332.wav', 'p336_199.wav', 'p343_287.wav', 'p334_249.wav',
+                  'p302_263.wav', 'p341_143.wav', 'p339_281.wav', 'p251_295.wav', 'p257_207.wav', 'p302_288.wav',
+                  'p257_213.wav', 'p364_041.wav', 'p264_340.wav', 'p281_146.wav', 'p374_294.wav', 'p281_387.wav',
+                  'p343_085.wav', 'p336_364.wav']
 
 
 # Brain class for speech enhancement training
@@ -61,6 +68,17 @@ class SEBrain(sb.Brain):
         predict_wav = self.hparams.resynth(
             torch.expm1(predict_spec), noisy_wavs
         )
+
+        lens = lens * batch.clean_wav.shape[1]
+        for name, pred_wav, length in zip(batch.id, predict_wav, lens):
+            name += ".wav"
+            enhance_path = os.path.join(self.hparams.enhanced_folder, name)
+            if name in enhanced_files:
+                torchaudio.save(
+                    enhance_path,
+                    torch.unsqueeze(pred_wav[: int(length)].cpu(), 0),
+                    48000,
+                )
 
         # Return a dictionary so we don't have to remember the order
         return {"spec": predict_spec, "wav": predict_wav}
@@ -149,6 +167,33 @@ class SEBrain(sb.Brain):
             self.stoi_metric = sb.utils.metric_stats.MetricStats(
                 metric=sb.nnet.loss.stoi_loss.stoi_loss
             )
+
+    def evaluate_batch(self, batch, stage):
+        """Evaluate one batch, override for different procedure than train.
+
+        The default implementation depends on two methods being defined
+        with a particular behavior:
+
+        * ``compute_forward()``
+        * ``compute_objectives()``
+
+        Arguments
+        ---------
+        batch : list of torch.Tensors
+            Batch of data to use for evaluation. Default implementation assumes
+            this batch has two elements: inputs and targets.
+        stage : Stage
+            The stage of the experiment: Stage.VALID, Stage.TEST
+
+        Returns
+        -------
+        detached loss
+        """
+
+        out = self.compute_forward(batch, stage=stage)
+
+        loss = self.compute_objectives(out, batch, stage=stage)
+        return loss.detach().cpu()
 
     def on_stage_end(self, stage, stage_loss, epoch=None):
         """Gets called at the end of an epoch.

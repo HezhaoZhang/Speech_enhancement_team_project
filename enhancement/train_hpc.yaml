@@ -27,6 +27,7 @@ __set_seed: !!python/object/apply:torch.manual_seed [!ref <seed>]
 scratch_path: ''
 data_folder: !ref <scratch_path>/corpus-<dataset_id>-split
 output_folder: !ref ./results_hpc/corpus-<dataset_id>
+enhanced_folder: !ref <output_folder>/enhanced
 save_folder: !ref <output_folder>/save
 train_log: !ref <output_folder>/train_log.txt
 rir_folder: !ref <data_folder>

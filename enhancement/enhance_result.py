@@ -45,23 +45,6 @@ class SEBrain(sb.Brain):
         # Return a dictionary so we don't have to remember the order
         return {"spec": predict_spec, "wav": predict_wav}
 
-    def enhance(self, noisy_wavs, stage):
-        noisy_wavs = noisy_wavs.to(self.device)
-        noisy_feats = self.compute_feats(noisy_wavs)
-
-        # Masking is done here with the "signal approximation (SA)" algorithm.
-        # The masked input is compared directly with clean speech targets.
-        mask = self.modules.model(noisy_feats)
-        predict_spec = torch.mul(mask, noisy_feats)
-
-        # Also return predicted wav, for evaluation. Note that this could
-        # also be used for a time-domain loss term.
-        predict_wav = self.hparams.resynth(
-            torch.expm1(predict_spec), noisy_wavs
-        )
-
-        return {"spec": predict_spec, "wav": predict_wav}
-
     def compute_feats(self, wavs):
         """Returns corresponding log-spectral features of the input waveforms.
 
@@ -276,6 +259,7 @@ if __name__ == "__main__":
     example_json = '../data/examples/selected_files.json'
     with open(example_json, 'r') as jsonfile:
         selected_files = json.load(jsonfile)
+    datasets = dataio_prep(hparams)
     for key in selected_files:
         file = f"../data/examples/corpus-{hparams['dataset_id']}-examples-original/{key}"
         wav = sb.dataio.dataio.read_audio(file)
