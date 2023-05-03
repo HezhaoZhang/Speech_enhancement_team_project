@@ -68,17 +68,17 @@ class SEBrain(sb.Brain):
         predict_wav = self.hparams.resynth(
             torch.expm1(predict_spec), noisy_wavs
         )
-
-        lens = lens * batch.clean_wav.shape[1]
-        for name, pred_wav, length in zip(batch.id, predict_wav, lens):
-            name += ".wav"
-            enhance_path = os.path.join(self.hparams.enhanced_folder, name)
-            if name in enhanced_files:
-                torchaudio.save(
-                    enhance_path,
-                    torch.unsqueeze(pred_wav[: int(length)].cpu(), 0),
-                    48000,
-                )
+        if stage is sb.Stage.TEST:
+            lens = lens * batch.clean_sig.data.shape[1]
+            for name, pred_wav, length in zip(batch.id, predict_wav, lens):
+                name += ".wav"
+                enhance_path = os.path.join(self.hparams.enhanced_folder, name)
+                if name in enhanced_files:
+                    torchaudio.save(
+                        enhance_path,
+                        torch.unsqueeze(pred_wav[: int(length)].cpu(), 0),
+                        48000,
+                    )
 
         # Return a dictionary so we don't have to remember the order
         return {"spec": predict_spec, "wav": predict_wav}
@@ -347,6 +347,8 @@ if __name__ == "__main__":
         train_loader_kwargs=hparams["dataloader_options"],
         valid_loader_kwargs=hparams["dataloader_options"],
     )
+    if not os.path.exists(hparams["enhanced_folder"]):
+        os.makedirs(hparams["enhanced_folder"])
 
     # Load best checkpoint (highest STOI) for evaluation
     test_stats = se_brain.evaluate(
