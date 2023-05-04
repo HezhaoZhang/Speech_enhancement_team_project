@@ -4,7 +4,7 @@ import os
 
 dataset_id = 2
 # Read the data from the text file
-corpus_id = "4-9"
+corpus_id = "1"
 with open(f'results_hpc/corpus-{corpus_id}/train_log.txt', 'r') as f:
     data = f.read()
 

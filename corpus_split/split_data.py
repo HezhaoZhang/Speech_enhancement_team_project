@@ -40,11 +40,13 @@ if __name__ == "__main__":
     parser.add_argument("input_path", help="Path to the data folder containing the zip files")
     parser.add_argument("output_path", help="Path where the split files will be saved")
     parser.add_argument("data_id", help="dataset id")
+    parser.add_argument("test", help="is test mode")
     args = parser.parse_args()
 
     input_path = args.input_path
     output_path = args.output_path
     data_id = args.data_id
+    is_test = args.test
 
     if "padded" in data_id:
         zip_file_path = os.path.join(input_path, 'corpus-0-padded.zip')
