@@ -46,7 +46,10 @@ if __name__ == "__main__":
     output_path = args.output_path
     data_id = args.data_id
 
-    zip_file_path = os.path.join(input_path, 'corpus-0.zip')
+    if "padded" in data_id:
+        zip_file_path = os.path.join(input_path, 'corpus-0-padded.zip')
+    else:
+        zip_file_path = os.path.join(input_path, 'corpus-0.zip')
     split_wav_files(zip_file_path, output_path, random_state=42)
     
     print("output_path",output_path)
