@@ -268,7 +268,7 @@ def dataio_prep(hparams):
     def audio_pipeline(wav):
         """Load the signal, and pass it and its length to the corruption class.
         This is done on the CPU in the `collate_fn`."""
-        if "padded" not in hparams["dataset_id"]:
+        if "padded" not in str(hparams["dataset_id"]):
             clean_file = wav.replace(f'corpus-{hparams["dataset_id"]}', 'corpus-0')
         else:
             clean_file = wav.replace(f'corpus-{hparams["dataset_id"]}', 'corpus-0-padded')
