@@ -77,7 +77,7 @@ class SEBrain(sb.Brain):
                     torchaudio.save(
                         enhance_path,
                         torch.unsqueeze(pred_wav[: int(length)].cpu(), 0),
-                        48000,
+                        16000,
                     )
 
         # Return a dictionary so we don't have to remember the order
@@ -271,10 +271,11 @@ def dataio_prep(hparams):
         if "padded" not in str(hparams["dataset_id"]):
             clean_file = wav.replace(f'corpus-{hparams["dataset_id"]}', 'corpus-0')
         else:
-            clean_file = wav.replace(f'corpus-{hparams["dataset_id"]}', 'corpus-0-padded')
+            clean_file = wav.replace(f'corpus-', 'corpus-0-')
+
+        noisy_sig = sb.dataio.dataio.read_audio(wav)
         clean_sig = sb.dataio.dataio.read_audio(clean_file)
         # noisy_sig = sb.dataio.dataio.read_audio(wav).mean(dim=1)
-        noisy_sig = sb.dataio.dataio.read_audio(wav)
         return noisy_sig, clean_sig
 
     # Define datasets sorted by ascending lengths for efficiency

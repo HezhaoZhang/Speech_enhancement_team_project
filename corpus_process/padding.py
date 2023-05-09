@@ -32,7 +32,7 @@ def compute_delay(s, x):
 
 
 def pad_and_save_wav_file(args):
-    file, source_folder, target_ref_folder, target_deg_folder, ref_folder, pad_original = args
+    file, source_folder, target_ref_folder, target_deg_folder, ref_folder = args
     file_name = os.path.splitext(file)[0]
     s_path = os.path.join(ref_folder, file)
     x2_path = os.path.join(source_folder, file)
@@ -43,11 +43,10 @@ def pad_and_save_wav_file(args):
     s_padded, x2_padded = componsate_delay(s, x2)
 
     sf.write(os.path.join(target_ref_folder, f"{file_name}.wav"), s_padded, fs)
-    if pad_original:
-        sf.write(os.path.join(target_deg_folder, f"{file_name}.wav"), x2_padded, fs)
+    sf.write(os.path.join(target_deg_folder, f"{file_name}.wav"), x2_padded, fs)
 
 
-def pad_wav_files(source_folder, target_ref_folder, target_deg_folder, ref_folder, pad_original):
+def pad_wav_files(source_folder, target_ref_folder, target_deg_folder, ref_folder):
     if not os.path.exists(target_ref_folder):
         os.makedirs(target_ref_folder)
     if not os.path.exists(target_deg_folder):
@@ -58,17 +57,18 @@ def pad_wav_files(source_folder, target_ref_folder, target_deg_folder, ref_folde
     with multiprocessing.Pool(10) as pool:
         results = pool.imap(
             pad_and_save_wav_file,
-            [(file, source_folder, target_ref_folder, target_deg_folder, ref_folder,pad_original) for file in wav_files]
+            [(file, source_folder, target_ref_folder, target_deg_folder, ref_folder) for file in wav_files]
         )
         for _ in tqdm(results, total=len(wav_files), desc="Padding WAV files"):
             pass
 
 
 if __name__ == "__main__":
-    dataset_id = '4-6'
-    pad_original = False
-    source_folder = f"../data/corpus/corpus-{dataset_id}"
+    dataset_id = '5-0'
+    print(dataset_id)
+    source_folder = f"../data/corpus/corpus-{dataset_id}-resample"
+    ref_folder = "../data/corpus/corpus-0-resample"
+
     target_deg_folder = f"../data/corpus/corpus-{dataset_id}-padded"
-    target_ref_folder = "../data/corpus/corpus-0-padded"
-    ref_folder = "../data/corpus/corpus-0"
-    pad_wav_files(source_folder, target_ref_folder, target_deg_folder, ref_folder, pad_original)
+    target_ref_folder = f"../data/corpus/corpus-0-{dataset_id}-padded"
+    pad_wav_files(source_folder, target_ref_folder, target_deg_folder, ref_folder)

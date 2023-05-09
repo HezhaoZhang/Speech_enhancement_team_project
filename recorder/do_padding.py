@@ -44,7 +44,7 @@ if __name__ == "__main__":
     name = sys.argv[1]
     s_path = "../data/corpus/corpus-0/%s.wav" % name
     x_path = "../data/corpus/corpus-1/%s.wav" % name
-    x2_path = "../data/corpus/corpus-4-0/%s.wav" % name
+    x2_path = "../data/corpus/corpus-4-3/%s.wav" % name
     s, fs = sf.read(s_path)
     x, fs = sf.read(x_path)
     x2, fs = sf.read(x2_path)

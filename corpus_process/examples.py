@@ -27,11 +27,11 @@ with open(output_json, 'w') as jsonfile:
 
 # %% Step 3 and 4: Read the WAV files using the soundfile library in Python and save them to a new folder.
 # Step 3 and 4: Read the WAV files using the soundfile library in Python and save them to a new folder.
-corpus_ids = [3, 4]
-channel_ids = [0, 3, 6, 9]
+corpus_ids = [5]
+channel_ids = [0,1,2]
 input_folders = [f'../data/corpus/corpus-{corpus_id}-{channel_id}' for corpus_id in corpus_ids for channel_id in
                  channel_ids]
-input_folders += ['../data/corpus/corpus-1']
+#input_folders += ['../data/corpus/corpus-1']
 
 output_folder = '../data/examples'
 # Iterate over each input folder
