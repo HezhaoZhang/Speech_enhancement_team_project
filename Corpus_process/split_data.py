@@ -50,11 +50,11 @@ if __name__ == "__main__":
     data_id = args.data_id
     is_test = args.test
 
-    # if "padded" in data_id:
-    #     zip_file_path = os.path.join(input_path, f'corpus-0-{data_id}.zip')
-    # else:
-    #     zip_file_path = os.path.join(input_path, 'corpus-0.zip')
-    zip_file_path = os.path.join(input_path, f'corpus-0-{data_id}.zip')
+    if "padded" in data_id:
+        zip_file_path = os.path.join(input_path, f'corpus-0-{data_id}.zip')
+    else:
+        zip_file_path = os.path.join(input_path, 'corpus-0-resample.zip')
+    # zip_file_path = os.path.join(input_path, f'corpus-0-{data_id}.zip')
     split_wav_files(zip_file_path, output_path, random_state=42)
 
     print("output_path", output_path)

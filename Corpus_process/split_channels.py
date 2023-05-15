@@ -27,8 +27,8 @@ def split_channels(input_wav_files, _input_folder, selected_channel):
 
 
 if __name__ == "__main__":
-    input_folder = "../data/corpus/corpus-5"
-    selected_channel = 0  # Select the channel you want to output (0-indexed)
+    input_folder = "../data/corpus/corpus-4"
+    selected_channel = 1  # Select the channel you want to output (0-indexed)
 
     wav_files = read_wav_files(input_folder)
     split_channels(wav_files, input_folder, selected_channel)

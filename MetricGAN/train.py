@@ -155,7 +155,7 @@ class MetricGanBrain(sb.Brain):
                 torchaudio.save(
                     enhance_path,
                     torch.unsqueeze(pred_wav[: int(length)].cpu(), 0),
-                    48000,
+                    16000,
                 )
 
         return cost
@@ -267,7 +267,7 @@ class MetricGanBrain(sb.Brain):
         ):
             path = os.path.join(self.hparams.MetricGAN_folder, name + ".wav")
             data = torch.unsqueeze(pred_wav[: int(length)].cpu(), 0)
-            torchaudio.save(path, data.detach().numpy(), self.hparams.Sample_rate)
+            torchaudio.save(path, data, self.hparams.Sample_rate)
 
             # Make record of path and score for historical training
             score = float(scores[i][0])
@@ -512,13 +512,9 @@ def audio_pipeline(wav):
 
 
 # For historical data
-@sb.utils.data_pipeline.takes("enh_wav", "wav")
+@sb.utils.data_pipeline.takes("enh_wav", "clean_wav")
 @sb.utils.data_pipeline.provides("enh_sig", "clean_sig")
 def enh_pipeline(enh_wav, clean_wav):
-    if "padded" not in str(hparams["dataset_id"]):
-        clean_wav = clean_wav.replace(f'corpus-{hparams["dataset_id"]}', 'corpus-0')
-    else:
-        clean_wav = clean_wav.replace(f'corpus-', 'corpus-0-')
     yield sb.dataio.dataio.read_audio(enh_wav)
     yield sb.dataio.dataio.read_audio(clean_wav)
 

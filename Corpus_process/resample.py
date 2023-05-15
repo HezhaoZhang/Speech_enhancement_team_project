@@ -19,7 +19,7 @@ def resample_wav_files(orig_folder, new_folder, orig_sr, new_sr):
 
 
 if __name__ == "__main__":
-    dataset_id = '0'
+    dataset_id = '4-1'
     print(dataset_id)
     orig_folder = f"../data/corpus/corpus-{dataset_id}"
     new_folder = f"../data/corpus/corpus-{dataset_id}-resample"

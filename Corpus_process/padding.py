@@ -54,7 +54,7 @@ def pad_wav_files(source_folder, target_ref_folder, target_deg_folder, ref_folde
 
     wav_files = [file for file in os.listdir(source_folder) if file.endswith(".wav")]
 
-    with multiprocessing.Pool(10) as pool:
+    with multiprocessing.Pool(12) as pool:
         results = pool.imap(
             pad_and_save_wav_file,
             [(file, source_folder, target_ref_folder, target_deg_folder, ref_folder) for file in wav_files]
@@ -64,7 +64,7 @@ def pad_wav_files(source_folder, target_ref_folder, target_deg_folder, ref_folde
 
 
 if __name__ == "__main__":
-    dataset_id = '5-0'
+    dataset_id = '4-1'
     print(dataset_id)
     source_folder = f"../data/corpus/corpus-{dataset_id}-resample"
     ref_folder = "../data/corpus/corpus-0-resample"

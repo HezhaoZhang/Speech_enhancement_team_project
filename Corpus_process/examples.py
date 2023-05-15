@@ -4,8 +4,8 @@ import os
 import soundfile as sf
 
 # %% Step 1: Read the CSV file and random select filenames for each distinct (noisetype, snr) tuple.
-csv_file = '../recorder/log_corpus.csv'
-with open("../enhancement/results/4234-1/test.json") as f:
+csv_file = '../Recorder/log_corpus.csv'
+with open("../Enhancement_lstm/results/4234-1/test.json") as f:
     test = json.load(f)
 test = list(test.keys())
 

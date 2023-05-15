@@ -269,7 +269,7 @@ def dataio_prep(hparams):
         """Load the signal, and pass it and its length to the corruption class.
         This is done on the CPU in the `collate_fn`."""
         if "padded" not in str(hparams["dataset_id"]):
-            clean_file = wav.replace(f'corpus-{hparams["dataset_id"]}', 'corpus-0')
+            clean_file = wav.replace(f'corpus-{hparams["dataset_id"]}', 'corpus-0-resample')
         else:
             clean_file = wav.replace(f'corpus-', 'corpus-0-')
 

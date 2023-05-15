@@ -6,26 +6,26 @@
 #  * Szu-Wei Fu 2021
 #  * Peter Plantinga 2020, 2021
 # #################################
-dataset_id: "1"
+dataset_id: !PLACEHOLDER
 # Seed needs to be set at top of yaml, before objects with parameters are made
 seed: 4234
 __set_seed: !!python/object/apply:torch.manual_seed [!ref <seed>]
 
 
 
-scratch_path: ''
+scratch_path: !PLACEHOLDER
 data_folder: !ref <scratch_path>/corpus-<dataset_id>-split
 output_folder: !ref ./results_hpc/corpus-<dataset_id>
 save_folder: !ref <output_folder>/save
 train_log: !ref <output_folder>/train_log.txt
 rir_folder: !ref <data_folder>
-
+train_clean_folder: !ref <scratch_path>/corpus-0-<dataset_id>-split/train
 MetricGAN_folder: !ref <output_folder>/enhanced_wavs
 enhanced_folder: !ref <output_folder>/enhanced_wavs
 historical_file: !ref <output_folder>/historical.txt
 
 # Basic parameters
-use_tensorboard: True
+use_tensorboard: False
 tensorboard_logs: !ref <output_folder>/logs/
 
 # FFT parameters
